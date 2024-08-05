@@ -1,0 +1,20 @@
+apiVersion: namespaceclass.josephb.org/v1alpha1
+kind: NamespaceClass
+metadata:
+  labels:
+    app.kubernetes.io/name: namespace-class
+    app.kubernetes.io/managed-by: kustomize
+  name: public-network
+spec:
+  allowedIPs: "0.0.0.0/0"
+---
+
+apiVersion: namespaceclass.josephb.org/v1alpha1
+kind: NamespaceClass
+metadata:
+  labels:
+    app.kubernetes.io/name: namespace-class
+    app.kubernetes.io/managed-by: kustomize
+  name: local-network
+spec:
+  allowedIPs: "10.0.0.0/8"
